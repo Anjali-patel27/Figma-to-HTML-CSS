@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Awareness Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scaler">
+        <div class="container">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="logo">covid.</div>
+                <nav class="nav-menu">
+                    <div class="nav-item" onclick="scrollToSection('home')">home</div>
+                    <div class="nav-item" onclick="scrollToSection('reports')">Reports</div>
+                    <div class="nav-item" onclick="scrollToSection('centers')">centers</div>
+                    <div class="nav-item" onclick="scrollToSection('about')">about</div>
+                    <div class="nav-item" onclick="scrollToSection('symptoms')">symptoms</div>
+                    <div class="nav-item" onclick="scrollToSection('contact')">contact</div>
+                </nav>
+                <div class="hero-content">
+                    <div class="hero-subtitle">covid-19 awareness</div>
+                    <h1 class="hero-title">stay safe. stay Home.</h1>
+                    <p class="hero-description">Amet minim mollit non deserunt ullamco est sit do amet sint officia. Velit officia consequat duis enim velit mollit.</p>
+                    <button class="cta-button" onclick="showPreventionInfo()">how to prevent</button>
+                </div>
+                <img src="assets/images/img_heros.png" alt="COVID-19 Prevention Illustration" class="hero-image">
+            </header>
+            <!-- Statistics Section -->
+            <section class="stats-section" id="reports">
+                <h2 class="stats-title">Coronavirus Statistics</h2>
+                <p class="stats-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <img src="assets/images/img_bugreport.svg" alt="Active Cases Icon" class="stat-icon">
+                        <div class="stat-number">95,856,25</div>
+                        <div class="stat-label">active case</div>
+                    </div>
+                    <div class="stat-card">
+                        <img src="assets/images/img_bugreport.svg" alt="Death Cases Icon" class="stat-icon">
+                        <div class="stat-number">5,856,25</div>
+                        <div class="stat-label">death case</div>
+                    </div>
+                    <div class="stat-card">
+                        <img src="assets/images/img_bugreport.svg" alt="Recovered Cases Icon" class="stat-icon">
+                        <div class="stat-number">595,856,25</div>
+                        <div class="stat-label">recovered cases</div>
+                    </div>
+                </div>
+            </section>
+            <!-- What is Coronavirus Section -->
+            <section class="info-section what-is" id="about">
+                <img src="assets/images/img_photo1.png" alt="Person wearing mask working on laptop" class="info-image">
+                <div class="info-content">
+                    <h2 class="info-title">What is coronavirus?</h2>
+                    <p class="info-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation</p>
+                    <ul class="info-list">
+                        <li>
+                            <img src="assets/images/img_checkcircle.svg" alt="Check" class="check-icon">
+                            Amet minim mollit non deserunt
+                        </li>
+                        <li>
+                            <img src="assets/images/img_checkcircle.svg" alt="Check" class="check-icon">
+                            Deserunt ullamco est sit
+                        </li>
+                        <li>
+                            <img src="assets/images/img_checkcircle.svg" alt="Check" class="check-icon">
+                            Velit officia consequat duis enim
+                        </li>
+                    </ul>
+                    <button class="cta-button" onclick="showMoreInfo('coronavirus')">learn More</button>
+                </div>
+            </section>
+            <!-- Why is it Dangerous Section -->
+            <section class="info-section why-dangerous">
+                <div class="info-content">
+                    <h2 class="info-title">Why is it Dangerous?</h2>
+                    <p class="info-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation</p>
+                    <ul class="info-list">
+                        <li>
+                            <img src="assets/images/img_checkcircle.svg" alt="Check" class="check-icon">
+                            Amet minim mollit non deserunt
+                        </li>
+                        <li>
+                            <img src="assets/images/img_checkcircle.svg" alt="Check" class="check-icon">
+                            Deserunt ullamco est sit
+                        </li>
+                        <li>
+                            <img src="assets/images/img_checkcircle.svg" alt="Check" class="check-icon">
+                            Velit officia consequat duis enim
+                        </li>
+                    </ul>
+                    <button class="cta-button" onclick="showMoreInfo('dangerous')">learn More</button>
+                </div>
+                <img src="assets/images/img_photo2.png" alt="Elderly person wearing mask outdoors" class="info-image">
+            </section>
+            <!-- Feature Cards -->
+            <div class="feature-cards">
+                <div class="feature-card" onclick="showFeatureInfo('symptoms')">
+                    <img src="assets/images/img_mask_group.png" alt="Symptoms Icon" class="feature-icon">
+                    <div class="feature-content">
+                        <h3>symptoms</h3>
+                        <p>Amet minim mollit non</p>
+                    </div>
+                </div>
+                <div class="feature-card" onclick="showFeatureInfo('protection')">
+                    <img src="assets/images/img_mask_group.png" alt="Protection Icon" class="feature-icon">
+                    <div class="feature-content">
+                        <h3>protection</h3>
+                        <p>Amet minim mollit non</p>
+                    </div>
+                </div>
+                <div class="feature-card" onclick="showFeatureInfo('security')">
+                    <img src="assets/images/img_mask_group.png" alt="Security Icon" class="feature-icon">
+                    <div class="feature-content">
+                        <h3>security</h3>
+                        <p>Amet minim mollit non</p>
+                    </div>
+                </div>
+                <div class="feature-card" onclick="showFeatureInfo('treatment')">
+                    <img src="assets/images/img_mask_group.png" alt="Treatment Icon" class="feature-icon">
+                    <div class="feature-content">
+                        <h3>treatment</h3>
+                        <p>Amet minim mollit non</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Prevention Section -->
+            <section class="prevention-section">
+                <div class="prevention-cards">
+                    <div class="prevention-card">
+                        <div class="prevention-card-header">
+                            <img src="assets/images/img_mask_group_deep_purple_500.svg" alt="Stay at Home Icon" class="prevention-card-icon">
+                        </div>
+                        <div class="prevention-card-content">
+                            <h3>Stay at home</h3>
+                            <p>Amet minim mollit non dese ullamco est sit aliqua dolor do amet sint.</p>
+                        </div>
+                    </div>
+                    <div class="prevention-card">
+                        <div class="prevention-card-header">
+                            <img src="assets/images/img_mask_group_deep_purple_500.svg" alt="Stay at Home Icon" class="prevention-card-icon">
+                        </div>
+                        <div class="prevention-card-content">
+                            <h3>Stay at home</h3>
+                            <p>Amet minim mollit non dese ullamco est sit aliqua dolor do amet sint.</p>
+                        </div>
+                    </div>
+                    <div class="prevention-card">
+                        <div class="prevention-card-header">
+                            <img src="assets/images/img_mask_group_deep_purple_500.svg" alt="Stay at Home Icon" class="prevention-card-icon">
+                        </div>
+                        <div class="prevention-card-content">
+                            <h3>Stay at home</h3>
+                            <p>Amet minim mollit non dese ullamco est sit aliqua dolor do amet sint.</p>
+                        </div>
+                    </div>
+                    <div class="prevention-card">
+                        <div class="prevention-card-header">
+                            <img src="assets/images/img_mask_group_deep_purple_500.svg" alt="Stay at Home Icon" class="prevention-card-icon">
+                        </div>
+                        <div class="prevention-card-content">
+                            <h3>Stay at home</h3>
+                            <p>Amet minim mollit non dese ullamco est sit aliqua dolor do amet sint.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prevention-content">
+                    <h2 class="prevention-title">How to prevent Coronavirus?</h2>
+                    <p class="prevention-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation</p>
+                    <p class="prevention-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <ul class="prevention-list">
+                        <li>
+                            <img src="assets/images/img_checkcircle.svg" alt="Check" class="check-icon">
+                            Amet minim mollit non deserunt
+                        </li>
+                        <li>
+                            <img src="assets/images/img_checkcircle.svg" alt="Check" class="check-icon">
+                            Deserunt ullamco est sit
+                        </li>
+                        <li>
+                            <img src="assets/images/img_checkcircle.svg" alt="Check" class="check-icon">
+                            Velit officia consequat duis enim
+                        </li>
+                    </ul>
+                    <button class="prevention-button" onclick="showPreventionDetails()">read more about prevention</button>
+                </div>
+            </section>
+            <!-- Protection Section -->
+            <section class="protection-section">
+                <h2 class="protection-title">How to protect yourself</h2>
+                <p class="protection-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <div class="protection-content">
+                    <div class="protection-lists">
+                        <div class="protection-list">
+                            <h3>You should do</h3>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/img_checkcircle_green_a700.svg" alt="Do" class="protection-icon">
+                                    Stay at home
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_checkcircle_green_a700.svg" alt="Do" class="protection-icon">
+                                    Wear mask
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_checkcircle_green_a700.svg" alt="Do" class="protection-icon">
+                                    Use Sanitizer
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_checkcircle_green_a700.svg" alt="Do" class="protection-icon">
+                                    Disinfect your home
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_checkcircle_green_a700.svg" alt="Do" class="protection-icon">
+                                    wash your hands
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_checkcircle_green_a700.svg" alt="Do" class="protection-icon">
+                                    Frequent self-isolation
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="protection-list">
+                            <h3>You should avoid</h3>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/img_icon_navigation_close24px.svg" alt="Avoid" class="protection-icon">
+                                    Avoid Infected people
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_icon_navigation_close24px.svg" alt="Avoid" class="protection-icon">
+                                    Avoid animals
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_icon_navigation_close24px.svg" alt="Avoid" class="protection-icon">
+                                    Avoid handshaking
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_icon_navigation_close24px.svg" alt="Avoid" class="protection-icon">
+                                    Avoid infected surfaces
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_icon_navigation_close24px.svg" alt="Avoid" class="protection-icon">
+                                    Avoid touching your face
+                                </li>
+                                <li>
+                                    <img src="assets/images/img_icon_navigation_close24px.svg" alt="Avoid" class="protection-icon">
+                                    Avoid droplets
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="assets/images/img_1_1.png" alt="Protection Illustration" class="protection-image">
+                </div>
+            </section>
+            <!-- Symptoms Section -->
+            <section class="symptoms-section" id="symptoms">
+                <h2 class="symptoms-title">Symptoms of coronavirus</h2>
+                <p class="symptoms-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt</p>
+                <div class="symptoms-cards">
+                    <div class="symptom-card">
+                        <img src="assets/images/img_icons8fever64_1.png" alt="High Fever Icon" class="symptom-icon">
+                        <div class="symptom-content">
+                            <h3>High Fever</h3>
+                            <p>It tells about fever.</p>
+                        </div>
+                    </div>
+                    <div class="symptom-card">
+                        <img src="assets/images/img_icons8fever64_1.png" alt="Cough Icon" class="symptom-icon">
+                        <div class="symptom-content">
+                            <h3>Cough</h3>
+                            <p>It tells about Cough.</p>
+                        </div>
+                    </div>
+                    <div class="symptom-card">
+                        <img src="assets/images/img_icons8fever64_1.png" alt="Sore Throat Icon" class="symptom-icon">
+                        <div class="symptom-content">
+                            <h3>Sore Throat</h3>
+                            <p>It tells about Sore Throat.</p>
+                        </div>
+                    </div>
+                    <div class="symptom-card">
+                        <img src="assets/images/img_icons8fever64_1.png" alt="Headache Icon" class="symptom-icon">
+                        <div class="symptom-content">
+                            <h3>Headache</h3>
+                            <p>It tells about Headache.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="symptoms-footer">
+                    <p>Stay at home and call your doctor: Amet minim mollit non deserunt ullam est sit aliqua dolor do amet sint.</p>
+                    <button class="helpline-button" onclick="callHelpline()">help line</button>
+                </div>
+            </section>
+            <!-- News Section -->
+            <section class="news-section">
+                <h2 class="news-title">News and Articles</h2>
+                <p class="news-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt</p>
+                <div class="news-cards">
+                    <article class="news-card">
+                        <img src="assets/images/img_photo1.png" alt="Coronavirus News" class="news-image">
+                        <div class="news-date">5 Dec. 2021</div>
+                        <div class="news-meta">
+                            <div class="news-meta-item">
+                                <img src="assets/images/img_supervisedusercircle.svg" alt="Author" class="news-meta-icon">
+                                admin
+                            </div>
+                            <div class="news-meta-item">
+                                <img src="assets/images/img_supervisedusercircle.svg" alt="Comments" class="news-meta-icon">
+                                2 comments
+                            </div>
+                        </div>
+                        <h3 class="news-title-text">How coronavirus very contagious</h3>
+                    </article>
+                    <article class="news-card">
+                        <img src="assets/images/img_photo2.png" alt="Coronavirus News" class="news-image">
+                        <div class="news-date">10 Dec. 2021</div>
+                        <div class="news-meta">
+                            <div class="news-meta-item">
+                                <img src="assets/images/img_supervisedusercircle.svg" alt="Author" class="news-meta-icon">
+                                admin
+                            </div>
+                            <div class="news-meta-item">
+                                <img src="assets/images/img_supervisedusercircle.svg" alt="Comments" class="news-meta-icon">
+                                5 comments
+                            </div>
+                        </div>
+                        <h3 class="news-title-text">How coronavirus very contagious</h3>
+                    </article>
+                    <article class="news-card">
+                        <img src="assets/images/img_photo1.png" alt="Coronavirus News" class="news-image">
+                        <div class="news-date">5 Dec. 2021</div>
+                        <div class="news-meta">
+                            <div class="news-meta-item">
+                                <img src="assets/images/img_supervisedusercircle.svg" alt="Author" class="news-meta-icon">
+                                admin
+                            </div>
+                            <div class="news-meta-item">
+                                <img src="assets/images/img_supervisedusercircle.svg" alt="Comments" class="news-meta-icon">
+                                2 comments
+                            </div>
+                        </div>
+                        <h3 class="news-title-text">How coronavirus very contagious</h3>
+                    </article>
+                </div>
+            </section>
+            <!-- Footer -->
+            <footer class="footer" id="contact">
+                <div class="footer-logo"></div>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About</h3>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <div class="social-icons">
+                            <img src="assets/images/img_facebook.svg" alt="Facebook" class="social-icon" onclick="openSocialMedia('facebook')">
+                            <img src="assets/images/img_twitter.svg" alt="Twitter" class="social-icon" onclick="openSocialMedia('twitter')">
+                            <img src="assets/images/img_instagram.svg" alt="Instagram" class="social-icon" onclick="openSocialMedia('instagram')">
+                            <img src="assets/images/img_youtube.svg" alt="YouTube" class="social-icon" onclick="openSocialMedia('youtube')">
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#symptoms" onclick="scrollToSection('symptoms')">Symptoms</a></li>
+                            <li><a href="#prevention" onclick="scrollToSection('prevention')">Prevention</a></li>
+                            <li><a href="#faqs" onclick="showFAQs()">FAQs</a></li>
+                            <li><a href="#about" onclick="scrollToSection('about')">About Coronavirus</a></li>
+                            <li><a href="#contact" onclick="scrollToSection('contact')">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Helpful Links</h3>
+                        <ul>
+                            <li><a href="#" onclick="openExternalLink('healthcare')">Healthcare Professional</a></li>
+                            <li><a href="#" onclick="openExternalLink('lgu')">LGU Facilities</a></li>
+                            <li><a href="#" onclick="openExternalLink('family')">Protect Your Family</a></li>
+                            <li><a href="#" onclick="openExternalLink('health')">World Health</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#" onclick="openExternalLink('who')">WHO Website</a></li>
+                            <li><a href="#" onclick="openExternalLink('cdc')">CDC Website</a></li>
+                            <li><a href="#" onclick="openExternalLink('gov')">Gov Website</a></li>
+                            <li><a href="#" onclick="openExternalLink('doh')">DOH Website</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        // Navigation functionality
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                // For sections without specific IDs, scroll to approximate positions
+                const positions = {
+                    'home': 0,
+                    'reports': 583,
+                    'centers': 979,
+                    'about': 979,
+                    'symptoms': 3663,
+                    'contact': 5190
+                };
+                if (positions[sectionId]) {
+                    window.scrollTo({ top: positions[sectionId], behavior: 'smooth' });
+                }
+            }
+        }
+        // Prevention information modal
+        function showPreventionInfo() {
+            alert('Prevention Information:\n\n• Stay at home\n• Wear masks\n• Use sanitizer\n• Wash hands frequently\n• Maintain social distance\n• Avoid crowded places');
+        }
+        // More information functionality
+        function showMoreInfo(topic) {
+            const info = {
+                'coronavirus': 'Coronavirus is a family of viruses that can cause illness in animals or humans. The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales.',
+                'dangerous': 'COVID-19 is dangerous because it can cause severe respiratory illness, especially in older adults and people with underlying health conditions. It spreads easily from person to person and can overwhelm healthcare systems.'
+            };
+            alert(info[topic] || 'More information coming soon...');
+        }
+        // Feature information
+        function showFeatureInfo(feature) {
+            const features = {
+                'symptoms': 'Common symptoms include fever, cough, shortness of breath, fatigue, and loss of taste or smell.',
+                'protection': 'Protect yourself by wearing masks, washing hands, maintaining distance, and getting vaccinated.',
+                'security': 'Follow health guidelines and stay informed about the latest safety measures.',
+                'treatment': 'Seek medical attention if you experience severe symptoms. Treatment varies based on severity.'
+            };
+            alert(features[feature] || 'Feature information coming soon...');
+        }
+        // Prevention details
+        function showPreventionDetails() {
+            alert('Detailed Prevention Guidelines:\n\n1. Wash your hands frequently with soap and water\n2. Maintain at least 6 feet distance from others\n3. Wear a face mask in public settings\n4. Avoid touching your face\n5. Stay home when you feel sick\n6. Clean and disinfect frequently touched surfaces');
+        }
+        // Helpline functionality
+        function callHelpline() {
+            alert('COVID-19 Helpline: 1-800-COVID-19\n\nFor medical emergencies, call 911\nFor general information, visit your local health department website');
+        }
+        // Social media links
+        function openSocialMedia(platform) {
+            const urls = {
+                'facebook': 'https://facebook.com',
+                'twitter': 'https://twitter.com',
+                'instagram': 'https://instagram.com',
+                'youtube': 'https://youtube.com'
+            };
+            if (urls[platform]) {
+                window.open(urls[platform], '_blank');
+            }
+        }
+        // External links
+        function openExternalLink(type) {
+            const links = {
+                'healthcare': '#',
+                'lgu': '#',
+                'family': '#',
+                'health': '#',
+                'who': '#',
+                'cdc': '#',
+                'gov': '#',
+                'doh': '#'
+            };
+            if (links[type] && links[type] !== '#') {
+                window.open(links[type], '_blank');
+            } else {
+                alert('Link coming soon...');
+            }
+        }
+        // FAQ functionality
+        function showFAQs() {
+            alert('Frequently Asked Questions:\n\n1. How does COVID-19 spread?\n2. What are the symptoms?\n3. How can I protect myself?\n4. When should I get tested?\n5. What should I do if I feel sick?\n\nFor detailed answers, visit the CDC website.');
+        }
+    </script>
+</body>
+</html>
